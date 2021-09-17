@@ -75,8 +75,3 @@
         </v-col>
     </v-row>
 </template>
-<style lang="scss" scoped>
-.card-shadow{
-    box-shadow: 1px 60px 55px -25px #00000018 !important;
-}
-</style>

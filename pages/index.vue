@@ -15,6 +15,21 @@
 				<Asistence/>
 			</v-col>
 		</v-row>
+		<v-row  justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0 pt-lg-8">
+			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
+				<Venues/>
+			</v-col>
+		</v-row>
+		<v-row  justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0 pt-lg-8">
+			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
+				<Advantage/>
+			</v-col>
+		</v-row>
+		<v-row  justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0 pt-lg-8">
+			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
+				<Formcontact/>
+			</v-col>
+		</v-row>
 	</v-container>
 </template>
 
@@ -23,10 +38,14 @@
 import Welcome from '~/components/index/Welcome.vue';
 import Cards from '~/components/index/Cards.vue';
 import Asistence from '~/components/index/Asistencias.vue';
+import Venues from '~/components/index/Venues.vue';
+import Advantage from '~/components/index/Advantage.vue';
+import Formcontact from '~/components/index/FormContact.vue';
+
 
 export default {
 	components:{
-		Welcome, Cards, Asistence
+		Welcome, Cards, Asistence, Venues, Advantage, Formcontact
 	}
 }
 </script>
@@ -41,5 +60,16 @@ export default {
         transform: scale(1.06);        
     }
 }
+
+.d-100{
+    max-width: 100%;
+}
+.card-shadow{
+	box-shadow: 1px 60px 55px -25px #00000018 !important;
+}
+.shadow-principal{
+    box-shadow: 1px 1px 45px -8px rgba(0, 0, 0, 0.18) !important;
+}
+
 
 </style>

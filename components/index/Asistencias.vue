@@ -1,5 +1,5 @@
 <template>
-    <v-row align="center" class="mt-15">
+    <v-row align="center" justify="center" class="mt-15">
         <v-col cols="12" sm="12" md="12" lg="5" xl="5">
             <div class="rounded-xl">
                 <v-carousel
@@ -8,9 +8,7 @@
                     show-arrows-on-hover
                     class="rounded-xl"
                     height="600"
-
-                >
-                                
+                >                               
                     <v-carousel-item
                         v-for="({src}, i) in slides"
                         :key="i"
@@ -26,9 +24,9 @@
         <v-col cols="12" sm="12" md="12" lg="6" xl="6">
             <div class="ml-0 ml-md-15 pl-md-6">
                 <div class="mb-6">
-                    <h1>Exclusivas Asistencias <br> para ti y toda tu familia.</h1>
-                    <p>Hay momentos únicos para vivirlos una y otra vez.</p>
-                    <p>Adquiere grandes beneficios en tu plan de previsión exequial, ven y Conoce el complemento ideal para la protección y tranquilidad en los momentos más importantes de tu vida y la de tu familia. </p>
+                    <h2 class="secondary--text display-1 font-weight-bold">Exclusivas Asistencias <br> para ti y toda tu familia.</h2>
+                    <p class="mb-6 title secondary--text">Hay momentos únicos para vivirlos una y otra vez.</p>
+                    <p class="secondary--text">Adquiere grandes beneficios en tu plan de previsión exequial, ven y Conoce el complemento ideal para la protección y tranquilidad en los momentos más importantes de tu vida y la de tu familia. </p>
                 </div>
                 <div class="mb-6">
                     <v-btn 
