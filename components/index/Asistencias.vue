@@ -18,7 +18,6 @@
                     >
                     </v-carousel-item>
                 </v-carousel>
-
             </div>
         </v-col>
         <v-col cols="12" sm="12" md="12" lg="6" xl="6">

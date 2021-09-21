@@ -42,6 +42,12 @@
         		<Nuxt />
       		</v-container>
     	</v-main>
+
+		<v-footer color="grey lighten-4">	
+      		<v-container>
+	      		<Footer/>
+			</v-container>
+	    </v-footer>
     <!-- <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
@@ -59,30 +65,32 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer> -->
-    <!-- <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer> -->
+    
   </v-app>
 </template>
 
 <script>
+
+import Footer from '../components/Footer.vue'
+
 export default {
-  data () {
-    return {
-		btnsNav:[
-			{ text: 'Inicio', to: '/' },
-			{ text: 'Quienes somos', to: 'about' },
-			{ text: 'Planes' },
-			{ text: 'Homenajes' },
-			{ text: 'Sedes' },
-			{ text: 'Pagos' },
-			{ text: 'Noticias' },
-		]
-    }
-  }
+	components:{
+		Footer,
+	},
+  	data () {
+	    return {
+			fixed: false,
+			btnsNav:[
+				{ text: 'Inicio', to: '/' },
+				{ text: 'Quienes somos', to: 'about' },
+				{ text: 'Planes' },
+				{ text: 'Homenajes' },
+				{ text: 'Sedes' },
+				{ text: 'Pagos' },
+				{ text: 'Noticias' },
+			]
+    	}
+	}
 }
 </script>
 
@@ -103,6 +111,10 @@ export default {
 }
 .box-search{
     width: 250px;
+}
+.header-logo{
+	position: relative;
+	left: 12.5rem;
 }
 </style>
 

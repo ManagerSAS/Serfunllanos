@@ -148,6 +148,7 @@
                                         class="shadow-principal btn-hover"
                                         color="teal accent-3"
                                         rounded
+                                        large
                                         dark
                                     > Enviar mensaje </v-btn>
                                 </v-col>

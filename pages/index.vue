@@ -30,6 +30,11 @@
 				<Formcontact/>
 			</v-col>
 		</v-row>
+		<v-row  justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0 pt-lg-8">
+			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
+				<Certificates/>
+			</v-col>
+		</v-row>
 	</v-container>
 </template>
 
@@ -41,11 +46,13 @@ import Asistence from '~/components/index/Asistencias.vue';
 import Venues from '~/components/index/Venues.vue';
 import Advantage from '~/components/index/Advantage.vue';
 import Formcontact from '~/components/index/FormContact.vue';
+import Certificates from '~/components/index/Certificate.vue';
+
 
 
 export default {
 	components:{
-		Welcome, Cards, Asistence, Venues, Advantage, Formcontact
+		Welcome, Cards, Asistence, Venues, Advantage, Formcontact, Certificates
 	}
 }
 </script>
@@ -68,7 +75,10 @@ export default {
 	box-shadow: 1px 60px 55px -25px #00000018 !important;
 }
 .shadow-principal{
-    box-shadow: 1px 1px 45px -8px rgba(0, 0, 0, 0.18) !important;
+    box-shadow: 1px 2px 45px -8px rgba(0, 0, 0, 0.18) !important;
+}
+.card-shadow-2{
+	box-shadow: 1px 35px 45px -25px rgba(0,0,0,0.09412) !important;
 }
 
 
