@@ -11,8 +11,7 @@
         </v-row>
 
         <v-row class="mt-15 mb-15">
-            <v-col cols="12" sm="12" md="12" lg="6" xl="6">
-                
+            <v-col cols="12" sm="12" md="12" lg="6" xl="6">                
                 <v-card class="rounded-xl card-shadow-2 mb-6" color="teal darken-3" dark>
                     <v-card-title>
                         Serfunllanos

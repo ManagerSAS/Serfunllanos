@@ -14,7 +14,14 @@
                     color="pink darken-1"
                     dark
                     class="shadow-principal btn-hover"
-                > Deseo Afiliarme en linea</v-btn>
+                > Deseo Afiliarme en linea </v-btn>
+                <v-btn
+                    rounded
+                    large
+                    color="pink darken-1"
+                    outlined
+                    class="ml-3"
+                > conocer los planes exequiales </v-btn>
             </div>
         </v-col>
         <v-col cols="12" sm="12" md="12" lg="6" class="d-none d-lg-flex">

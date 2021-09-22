@@ -58,6 +58,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .color-blue-dark{
 	color: #003B4C;
 }

@@ -83,7 +83,7 @@ export default {
 			btnsNav:[
 				{ text: 'Inicio', to: '/' },
 				{ text: 'Quienes somos', to: 'about' },
-				{ text: 'Planes' },
+				{ text: 'Planes exequiales', to: 'plans' },
 				{ text: 'Homenajes' },
 				{ text: 'Sedes' },
 				{ text: 'Pagos' },
@@ -116,5 +116,6 @@ export default {
 	position: relative;
 	left: 12.5rem;
 }
+
 </style>
 

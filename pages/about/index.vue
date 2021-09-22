@@ -15,19 +15,28 @@
                 <Redolivos/>
             </v-col>
         </v-row>
+        <v-row justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0">
+			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
+                <Values/>
+            </v-col>
+        </v-row>
+        <v-row justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0">
+			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
+                <Principies/>
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 <script>
 import History from '~/components/about/aboutDescription.vue';
 import Cards from '~/components/about/cardsVisionMision.vue';
 import Redolivos from '~/components/about/redOlivos.vue';
+import Values from '~/components/about/valuesSerfunllanos.vue';
+import Principies from '~/components/about/principiesSerfunllanos.vue';
 
 export default {
     components:{
-        History, Cards, Redolivos
-    },
-    setup() {
-        
+        History, Cards, Redolivos, Values, Principies
     },
 }
 </script>
