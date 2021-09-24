@@ -6,7 +6,9 @@
             <h1 class="color-blue-dark display-1 font-weight-bold mb-6">
                 Conoce los planes Exequiales y las Asistencias <br> que te ofrecen Los Olivos Villavicencio. 
             </h1>
-            <p id="empresariales" class="secondary--text mb-6"> 
+            <div id="empresariales"></div>
+            <div id="individuales"></div>
+            <p class="secondary--text mb-6"> 
                 Queremos protegerte y acompañarte en cada momento, por eso y pensando en tu bienestar y en el de los que amas hemos diseñados gran variedad de productos que se ajustan a tus necesidades.
             </p>
         </v-col>

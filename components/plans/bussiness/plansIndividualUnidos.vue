@@ -31,6 +31,7 @@
         <v-row>
             <v-col>
                 <h3 class="font-weight-bold color-blue-dark"> Cobertura: </h3>
+                <p class="secondary--text"> Aplica términos y condiciones. </p>
             </v-col>
         </v-row>
 

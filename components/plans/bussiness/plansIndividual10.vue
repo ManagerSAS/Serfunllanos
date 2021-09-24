@@ -1,18 +1,20 @@
 <template>
-    <div>        
-        <v-row class="mb-15" align="center" justify="center">
+    <div>
+        <v-row class="mt-15 mb-15" align="center" justify="center">
             <v-col cols="12" sm="12" md="6" class="secondary--text">
-                <h1 class="display-1 font-weight-bold color-blue-dark mb-6"> Plan mi familia </h1>
-                <p>Diseñado para que puedas proteger tu núcleo familiar básico, según tu estado civil (Casado o Soltero), y así garantizar la tranquilidad de cada uno de los miembros de tu familia.</p>
+                <h1 class="display-1 font-weight-bold color-blue-dark mb-6"> Plan Unidos 10 </h1>
+                <p>
+                    Diseñado para que puedas proteger a 9 integrantes de tu núcleo familiar hasta el 4to grado de consanguinidad y hasta el 2do grado de afinidad.
+                </p>
                 <ul class="mb-6">
-                    <li> Afiliado principal y conyugue sin límite de edad. </li>
-                    <li> Hijos o hermanos. </li>
-                    <li> Padres y/o suegros. </li>
+                    <li> Afiliado principal hasta los 70 años. </li>
+                    <li> 2 beneficiarios hasta los 75 años (entre padres, cónyuge o suegros). </li>
+                    <li> 7 beneficiarios menores de 65 años. </li>
                 </ul>
                 <v-btn
                     class="shadow-principal btn-hover"
                     rounded
-                    color="blue accent-3"
+                    color="teal accent-3"
                     dark                    
                 >
                     Adquirir plan mi familia
@@ -20,8 +22,8 @@
             </v-col>
             <v-col cols="12" sm="12" md="6" class="secondary--text text--right">
                 <v-img
-                    lazy-src="https://res.cloudinary.com/dbepipmro/image/upload/v1632340623/planFamilia_kh6zel.png"
-                    src="https://res.cloudinary.com/dbepipmro/image/upload/v1632340623/planFamilia_kh6zel.png"
+                    lazy-src="https://res.cloudinary.com/dbepipmro/image/upload/v1632348454/planUnidos10Individual_tstgsd.png"
+                    src="https://res.cloudinary.com/dbepipmro/image/upload/v1632348454/planUnidos10Individual_tstgsd.png"
                     width="550"
                 ></v-img>
             </v-col>
@@ -39,12 +41,12 @@
             <v-col 
                 cols="12" sm="12" md="3" 
                 class="secondary--text"
-                v-for="({title, icon, list}, index) in coberturaMiFamilia"
+                v-for="({title, icon, list}, index) in coberturaMiFamilia10"
                 :key="index"    
             >
                 <v-card class="rounded-xl card-shadow" height="340">
                     <div class="pl-4 pt-4 mb-2">
-                        <v-card width="84" class="rounded-xl box-shadow-blue pa-5 text-center" color="blue accent-3" dark>
+                        <v-card width="84" class="rounded-xl box-shadow-teal pa-5 text-center" color="teal accent-3" dark>
                             <v-icon>
                                 {{ icon }}
                             </v-icon>
@@ -71,7 +73,7 @@
 export default {
     data(){
         return{
-            coberturaMiFamilia:[
+            coberturaMiFamilia10:[
                 {
                     title: 'Desprendimiento',
                     icon: 'mdi-human-handsdown mdi-36px',
@@ -115,3 +117,8 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+.acortag-volver{
+    text-decoration: none;
+}
+</style>

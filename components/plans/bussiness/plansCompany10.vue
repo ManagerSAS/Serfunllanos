@@ -17,7 +17,7 @@
                     color="teal accent-3"
                     dark                    
                 >
-                    Adquirir plan mi familia
+                    Adquirir plan unidos 10
                 </v-btn>
             </v-col>
             <v-col cols="12" sm="12" md="6" class="secondary--text text--right">
@@ -32,6 +32,7 @@
         <v-row>
             <v-col>
                 <h3 class="font-weight-bold color-blue-dark"> Cobertura: </h3>
+                <p class="secondary--text"> Aplica términos y condiciones. </p>
             </v-col>
         </v-row>
 

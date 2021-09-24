@@ -84,7 +84,7 @@ export default {
 				{ text: 'Inicio', to: '/' },
 				{ text: 'Quienes somos', to: 'about' },
 				{ text: 'Planes exequiales', to: 'plans' },
-				{ text: 'Homenajes' },
+				{ text: 'Homenajes', to: 'homenaje'  },
 				{ text: 'Sedes' },
 				{ text: 'Pagos' },
 				{ text: 'Noticias' },
