@@ -8,9 +8,10 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-col cols="12" sm="12" md="12" lg="3"
+            <v-col 
                 v-for="({title, subtitle, img}, index) in salas"
                 :key="index"
+                cols="12" sm="12" md="12" lg="3"
             >
                 <v-card class="rounded-xl card-shadow-2">
                     <v-img
