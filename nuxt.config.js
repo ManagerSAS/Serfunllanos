@@ -2,8 +2,6 @@ import colors from "vuetify/lib/util/colors"
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
-
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -41,6 +39,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+
+    'nuxt-compress'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,7 +59,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'es'
     }
   },
 
@@ -77,5 +77,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, ctx) {
+      config.performance.maxAssetSize = 700 * 1024
+    }
   }
 }

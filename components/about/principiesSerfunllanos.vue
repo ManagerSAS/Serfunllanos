@@ -8,7 +8,6 @@
             </v-col>
         </v-row>
         <v-row class="mt-15">
-
             <v-col 
                 v-for="({ icon, title, description }, index) in principies"
                 :key="index"

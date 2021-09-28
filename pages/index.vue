@@ -25,12 +25,12 @@
 				<Advantage/>
 			</v-col>
 		</v-row>
-		<v-row  justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0 pt-lg-8">
+		<v-row justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0 pt-lg-8">
 			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
 				<Formcontact/>
 			</v-col>
 		</v-row>
-		<v-row  justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0 pt-lg-8">
+		<v-row justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0 pt-lg-8">
 			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
 				<Certificates/>
 			</v-col>
@@ -47,8 +47,6 @@ import Venues from '~/components/index/Venues.vue';
 import Advantage from '~/components/index/Advantage.vue';
 import Formcontact from '~/components/index/FormContact.vue';
 import Certificates from '~/components/index/Certificate.vue';
-
-
 
 export default {
 	components:{

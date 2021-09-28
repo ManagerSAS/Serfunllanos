@@ -249,7 +249,7 @@ export default {
 
             // type novelty
             novelty: '',
-            typeNovelty:['Ingreso', 'Retiro'],
+            typeNovelty:['Afiliacion', 'Retiro'],
 
             // month
             month: '',

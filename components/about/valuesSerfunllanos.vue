@@ -30,7 +30,6 @@
             </v-col>            
         </v-row>
     </div>
-    
 </template>
 <script>
 export default {
