@@ -35,7 +35,7 @@
             </v-col>
         </v-row>
 
-        <v-row class="mt-10 mb-15">
+        <!-- <v-row class="mt-10 mb-15">
 
             <v-col 
                 cols="12" sm="12" md="3" 
@@ -65,7 +65,7 @@
                     </v-card-text>                    
                 </v-card>            
             </v-col>
-        </v-row>
+        </v-row> -->
     </div>
 </template>
 <script>

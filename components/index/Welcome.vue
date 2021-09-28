@@ -25,10 +25,10 @@
             </div>
         </v-col>
         <v-col cols="12" sm="12" md="12" lg="6" class="d-none d-lg-flex">
-            <!-- <v-img
-                src="../../static/welcome/imagen-principal.png"
-            ></v-img> -->
-            <img src="../../static/welcome/imagen-principal.png" alt="" class="d-100">
+            <v-img
+                src="https://res.cloudinary.com/dbepipmro/image/upload/v1632839873/imagen-principal_d3cqbw.png"
+            ></v-img>
+            <!-- <img src="../../static/welcome/imagen-principal.png" alt="" class="d-100"> -->
         </v-col>
     </v-row>
 </template>

@@ -15,71 +15,50 @@
         <v-col cols="12" sm="12" md="12" lg="6">
             <v-row class="ml-8">
                 <v-col cols="12" sm="12" md="6">
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
-                            <v-card :elevation="hover ? 24 : 'card-shadow'" class="rounded-xl mb-3 transition-swing">
-                                <v-img
-                                    :src="src"                                
-                                    height="150"
-                                    class="rounded-xl mb-3"
-                                ></v-img>
-                            </v-card>
-                        </template>
-                    </v-hover>
-
+                    <v-card class="rounded-xl mb-3 transition-swing">
+                        <v-img
+                            :src="src"
+                            height="150"
+                            class="rounded-xl mb-3"
+                        ></v-img>
+                    </v-card>                        
                     <v-row>
-                        <v-col cols="6">
-                            <v-hover>
-                                <template v-slot:default="{ hover }">
-                                    <v-card :elevation="hover ? 24 : 'card-shadow'" class="rounded-xl mb-3 transition-swing">
-                                        <v-img
-                                            :src="src2"                                
-                                            height="150"
-                                            class="rounded-xl mb-3"
-                                        ></v-img>
-                                    </v-card>
-                                </template>
-                            </v-hover>
-                        </v-col>
-                        <v-col cols="6">
-                            <v-hover>
-                                <template v-slot:default="{ hover }">
-                                    <v-card :elevation="hover ? 24 : 'card-shadow'" class="rounded-xl mb-3 transition-swing">
-                                        <v-img
-                                            :src="src3"
-                                            class="rounded-xl mb-3"
-                                            height="150"
-                                        ></v-img>
-                                    </v-card>
-                                </template>
-                            </v-hover>
-                        </v-col>
-                    </v-row>
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
-                            <v-card :elevation="hover ? 24 : 'card-shadow'" class="rounded-xl mb-3 transition-swing">
+                        <v-col cols="6">                            
+                            <v-card class="rounded-xl mb-3 transition-swing">
                                 <v-img
-                                    :src="src"
+                                    :src="src2"                                
+                                    height="150"
+                                    class="rounded-xl mb-3"
+                                ></v-img>
+                            </v-card>                                
+                        </v-col>
+                        <v-col cols="6">                            
+                            <v-card class="rounded-xl mb-3 transition-swing">
+                                <v-img
+                                    :src="src3"
                                     class="rounded-xl mb-3"
                                     height="150"
                                 ></v-img>
-                            </v-card>
-                        </template>
-                    </v-hover>
+                            </v-card>                                
+                        </v-col>
+                    </v-row>                    
+                    <v-card class="rounded-xl mb-3 transition-swing">
+                        <v-img
+                            :src="src"
+                            class="rounded-xl mb-3"
+                            height="150"
+                        ></v-img>
+                    </v-card>                        
                 </v-col>
-                <v-col cols="6">
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
-                            <v-card :elevation="hover ? 24 : '1'" class="rounded-xl mb-3 transition-swing" width="250">
-                                <v-img
-                                    :src="src2"
-                                    class="rounded-xl"
-                                    width="250"
-                                    height="475"
-                                ></v-img>
-                            </v-card>
-                        </template>
-                    </v-hover>
+                <v-col cols="6">                    
+                    <v-card :elevation="hover ? 24 : '1'" class="rounded-xl mb-3 transition-swing" width="250">
+                        <v-img
+                            :src="src2"
+                            class="rounded-xl"
+                            width="250"
+                            height="475"
+                        ></v-img>
+                    </v-card>                        
                 </v-col>
             </v-row>
         </v-col>

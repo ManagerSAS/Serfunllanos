@@ -76,7 +76,7 @@ export default {
         return{
             interesting:[
                 { text: 'Actualización de datos', to: '/' },
-                { text: 'Novedades empresariales', to: '/' },
+                { text: 'Novedades empresariales', to: '/novedades-empresariales' },
                 { text: 'Proteccion de datos', to: '/' },
                 { text: 'Asistencias', to: '/' },
                 { text: 'Seguros de vida', to: '/' },
