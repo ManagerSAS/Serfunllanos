@@ -2,12 +2,12 @@
   	<v-app>
 		<v-app-bar
 			color="white"
-			class="pl-16 pr-16 border-header"
+			class="pl-md-16 pr-md-16 border-header"
 			app        
 			flat
 			height="80"
 		>        
-        	<v-app-bar-nav-icon class="d-none"></v-app-bar-nav-icon>
+        	<v-app-bar-nav-icon class="d-sm-flex d-md-none"></v-app-bar-nav-icon>
 
         	<v-toolbar-title>
 	            <img src="../static/nav/iconLogin.png" alt="" width="65px">
@@ -19,11 +19,11 @@
 				v-for="({ text, to }, index) in  btnsNav" 
 				:key="index"
 				:to="{ path: to }"
-				class="s-acortag color-blue-dark"    
+				class="s-acortag color-blue-dark d-none d-md-flex"    
 			> {{ text }}
 			</NuxtLink>
 
-			<div class="box-search">
+			<div class="box-search d-none d-md-flex">
 				<v-text-field
 					placeholder="Buscar"
 					rounded
@@ -48,23 +48,7 @@
 	      		<Footer/>
 			</v-container>
 	    </v-footer>
-    <!-- <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
+    
     
   </v-app>
 </template>
@@ -79,6 +63,8 @@ export default {
 	},
   	data () {
 	    return {
+			rightDrawer: null,
+
 			fixed: false,
 			btnsNav:[
 				{ text: 'Inicio', to: '/' },

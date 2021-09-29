@@ -15,9 +15,7 @@
                     rounded
                     color="orange accent-3"
                     dark                    
-                >
-                    Adquirir plan unidos
-                </v-btn>
+                > Adquirir plan unidos </v-btn>
             </v-col>
             <v-col cols="12" sm="12" md="6" class="secondary--text text--right">
                 <v-img
@@ -27,21 +25,18 @@
                 ></v-img>
             </v-col>
         </v-row>
-
         <v-row>
             <v-col>
                 <h3 class="font-weight-bold color-blue-dark"> Cobertura: </h3>
                 <p class="secondary--text"> Aplica términos y condiciones. </p>
             </v-col>
         </v-row>
-
-        <!-- <v-row class="mt-10 mb-15">
-
+        <v-row class="mt-10 mb-15">
             <v-col 
-                cols="12" sm="12" md="3" 
+                v-for="({title, icon, list}, index) in coberturaMiFamilia10" 
+                :key="index"
+                cols="12" sm="12" md="3"
                 class="secondary--text"
-                v-for="({title, icon, list}, index) in coberturaMiFamilia10"
-                :key="index"    
             >
                 <v-card class="rounded-xl card-shadow" height="340">
                     <div class="pl-4 pt-4 mb-2">
@@ -65,7 +60,7 @@
                     </v-card-text>                    
                 </v-card>            
             </v-col>
-        </v-row> -->
+        </v-row>
     </div>
 </template>
 <script>

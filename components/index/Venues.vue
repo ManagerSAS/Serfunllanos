@@ -51,7 +51,7 @@
                     </v-card>                        
                 </v-col>
                 <v-col cols="6">                    
-                    <v-card :elevation="hover ? 24 : '1'" class="rounded-xl mb-3 transition-swing" width="250">
+                    <v-card class="rounded-xl mb-3 transition-swing" width="250">
                         <v-img
                             :src="src2"
                             class="rounded-xl"

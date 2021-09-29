@@ -58,8 +58,8 @@
                         <v-divider class="mb-4"></v-divider>
                         <ul>
                             <li 
-                                v-for="(item, index) in list"
-                                :key="index"                                
+                                v-for="(item, i) in list"
+                                :key="i"                                
                             > {{ item }} </li>                            
                         </ul>
                     </v-card-text>                    
