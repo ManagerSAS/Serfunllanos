@@ -61,6 +61,7 @@
                         </v-col>
                     </v-row>                    
 
+                    <!-- list noveltys -->
                     <v-expansion-panels class="mb-6 rounded-xl">
                         <v-expansion-panel class="rounded-xl">
                             <v-expansion-panel-header expand-icon="mdi-menu-down pa-1">
@@ -72,7 +73,7 @@
                                 <h3 class="color-blue-dark font-weight-bold">
                                     Datos de la novedad: 
                                 </h3>
-                                <div class="pa-2 mb-6">
+                                <div class="pa-2"> 
                                     <v-row>
                                         <v-col cols="12">
                                             <v-select
@@ -144,7 +145,6 @@
                                             ></v-text-field>
                                         </v-col>                        
                                     </v-row>
-
                                     <v-row>
                                         <v-col cols="12">
                                             <v-btn
@@ -159,21 +159,20 @@
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                     </v-expansion-panels>
-                    
 
                     <v-row>
                         <v-col cols="12" sm="12" md="12" lg="12">
                             <ul class="secondary--text">
-                                <li> Podrá adjuntar un archivo si lo requiere, formatos permitidios: Word(.doc .docx), Excel(.xls .xlsx), PDF </li>
-                                <li> Podrá más de un archivo. </li>
-                                <li> Si cuenta con un listado en excel con esta información podrá adjuntarlo.</li>
+                                <li> Podrá adjuntar un archivo si lo requiere, formatos permitidios: Excel(.xls .xlsx) o PDF </li>
+                                <li> Si cuenta con un listado en excel con esta información podrá adjuntarlo y omitir la novedad.</li>
+                                <li> Si cuenta con un PDF asegurese de que contenga toda la información</li>
                             </ul>
                             <v-file-input
-                                v-model="files"
-                                multiple
-                                accept=".doc, .docx, .pdf, .xls, .xlsx"
+                                type="file"
+                                accept=".pdf, .xls, .xlsx"
                                 color="teal darken-3"
                                 label="Adjuntar archivo(s)"
+                                @change="onSelectedFiles"
                             ></v-file-input>
                         </v-col>
                     </v-row>            
@@ -216,37 +215,7 @@
                 <h3 class="color-blue-dark font-weivght-bold mb-6">
                     Listado novedades:
                 </h3>
-                <v-list v-if="list != 0">
-                    <v-list-item
-                        v-for="(item, i) in list"
-                        :key="i"
-                    >
-                        <v-list-item-avatar>
-                            <v-icon color="teal darken-4"> mdi-account </v-icon>
-                        </v-list-item-avatar>
-                        <v-list-item-content>
-                            <v-list-item-title> {{ item.name }} </v-list-item-title>
-                            <v-list-item-subtitle> {{ item.novelty }} </v-list-item-subtitle>
-                        </v-list-item-content>
-                        <v-list-item-action>
-                            <v-btn icon
-                                @click="deleteItem(item)"
-                            >
-                                <v-icon color="red accent-3">mdi-close</v-icon>
-                            </v-btn>
-                        </v-list-item-action>
-                    </v-list-item>
-                </v-list>
-                <v-list v-else>
-                    <v-list-item>
-                        <v-list-item-avatar>
-                            <v-icon color="teal darken-4"> mdi-plus </v-icon>
-                        </v-list-item-avatar>
-                        <v-list-item-content>
-                            <v-list-item-title class="secondary--text"> No hay novedades </v-list-item-title>                            
-                        </v-list-item-content>                        
-                    </v-list-item>
-                </v-list>
+                <List :list="list"/>
             </v-col>    
         </v-row>
         <v-snackbar
@@ -262,10 +231,13 @@
 
 import Gcaptcha from '../recaptcha.vue'
 import Note from '../notas.vue'
+import UploadImage from '../../helpers/uploadImage'
+import Post from '../../post/post'
+import List from './listNovedades.vue'
 
 export default {
     components:{
-        Note, Gcaptcha
+        Note, Gcaptcha, List
     },
     data(){
         return{
@@ -279,7 +251,7 @@ export default {
             files: null,
 
             // list noveltys
-            list:[],
+            list: [],
 
             // type id
             typeId:'',
@@ -321,25 +293,35 @@ export default {
     },    
     methods:{
 
-        sendInfoNovelty(){
-                        
-            if(this.emailCompany !== '' && this.nameCompany !== '' && this.funcionary !== '' && this.termsConditions && this.resCaptcha === true){
-                const data = {
-                    email: this.emailCompany,
-                    company: this.nameCompany,
-                    funcionary: this.funcionary,
-                    center: this.workCenter,
-                    list: this.list,
-                    files: this.files
-                }
-                console.log(data)
+        async sendInfoNovelty(){
+            let file;
+            let list;
 
-                this.snackbar = true
-                this.colorSnackbar = 'green accent-4'
-                this.message = 'Se envio correctamente tu solicitud'
-                setTimeout(()=>{
-                    this.snackbar = false 
-                },3000)
+            if(this.emailCompany !== '' && this.nameCompany !== '' && this.funcionary !== '' && this.termsConditions && this.resCaptcha === true){
+                
+                if(this.files !== '') file = await UploadImage( this.files )            
+                if(this.list !== 0) list = this.list
+                
+                const data = {
+                    center: this.workCenter,
+                    company: this.nameCompany,
+                    email: this.emailCompany,
+                    funcionary: this.funcionary,
+                    file,
+                    list,
+                }
+
+                const response = await Post.postFormNoveltys( data )
+                if(response){
+                    this.snackbar = true
+                    this.colorSnackbar = 'green accent-4'
+                    this.message = 'Asegurate de diligenciar todos los campos incluyendo el captcha'
+                    setTimeout(()=>{
+                        this.snackbar = false 
+                    },3000)
+                    this.$refs.formNovelty.validate()
+                }
+
                                     
             }else{
                 this.snackbar = true
@@ -348,8 +330,12 @@ export default {
                 setTimeout(()=>{
                     this.snackbar = false 
                 },3000)
-                this.$refs.formNovelty.validate()                    
+                this.$refs.formNovelty.validate()
             }           
+        },
+
+        onSelectedFiles( event ){
+            this.files = event
         },
 
         verifyCaptcha(response){
@@ -391,12 +377,6 @@ export default {
             }
         },
 
-        deleteItem(item){
-            const i =  this.list.indexOf(item)
-            if( i !== -1 ){
-                this.list.splice(i, 1);
-            }
-        },
         
     },
 }
