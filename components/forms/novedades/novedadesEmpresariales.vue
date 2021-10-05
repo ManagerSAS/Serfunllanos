@@ -2,16 +2,6 @@
     <div>
         <v-row>
             <v-col cols="12" sm="12" md="12" lg="8">
-                <h1 class="color-blue-dark display-1 font-weight-bold mb-6">
-                    Novedades de Afiliaciones Empresariales:
-                </h1>
-                <p class="secondary--text">
-                    Estimado cliente por este medio podrá inscribir todas las novedades que requiera, cualquier inquietud por favor comunicarse al área de cartera teléfonos 6653986 - 6653987
-                </p>
-            </v-col>
-        </v-row>
-        <v-row>
-            <v-col cols="12" sm="12" md="12" lg="8">
                 <v-form ref="formNovelty" autocomplete="off">
                     <v-row class="mb-3">
                         <v-col cols="12">
@@ -163,19 +153,24 @@
                     <v-row>
                         <v-col cols="12" sm="12" md="12" lg="12">
                             <ul class="secondary--text">
-                                <li> Podrá adjuntar un archivo si lo requiere, formatos permitidios: Excel(.xls .xlsx) o PDF </li>
+                                <li> Proximamente podrás adjuntar archivos con tus listados </li>
+                                <!-- <li> Podrá adjuntar un archivo si lo requiere, formatos permitidios: Excel(.xls .xlsx) o PDF </li>
                                 <li> Si cuenta con un listado en excel con esta información podrá adjuntarlo y omitir la novedad.</li>
-                                <li> Si cuenta con un PDF asegurese de que contenga toda la información</li>
+                                <li> Si cuenta con un PDF asegurese de que contenga toda la información</li> -->
                             </ul>
                             <v-file-input
+                                v-model="file"
+                                name="file"
+                                multiple
                                 type="file"
                                 accept=".pdf, .xls, .xlsx"
                                 color="teal darken-3"
                                 label="Adjuntar archivo(s)"
-                                @change="onSelectedFiles"
+                                disabled
                             ></v-file-input>
+                            <!-- @change="onSelectedFiles" -->
                         </v-col>
-                    </v-row>            
+                    </v-row>
                     <v-row>
                         <v-col cols="12" sm="12" md="12" lg="12">
                             <p class="secondary--text">
@@ -191,9 +186,9 @@
                             ></v-checkbox>
                         </v-col>
                     </v-row>
+                    <!-- captcha -->
                     <v-row>
                         <v-col cols="12" sm="12" md="12" lg="12">
-                            <!-- captcha -->
                             <Gcaptcha @captcha="verifyCaptcha"/>
                         </v-col>
                     </v-row>
@@ -210,34 +205,27 @@
                     </v-row>
                 </v-form>
             </v-col>
-
             <v-col cols="12" sm="12" md="12" lg="4">
                 <h3 class="color-blue-dark font-weivght-bold mb-6">
                     Listado novedades:
                 </h3>
                 <List :list="list"/>
-            </v-col>    
+            </v-col>
         </v-row>
-        <v-snackbar
-            class="pb-8"
-            :timeout="3000"
-            :value="snackbar"
-            :color="colorSnackbar"
-            rounded="pill"
-        > {{ message }} </v-snackbar>
+        <Message :snackbar="snackbar" :colorSnackbar="colorSnackbar" :message="message"/>
     </div>
 </template>
 <script>
 
 import Gcaptcha from '../recaptcha.vue'
 import Note from '../notas.vue'
-import UploadImage from '../../helpers/uploadImage'
 import Post from '../../post/post'
+import Message from '../messages/message1.vue'
 import List from './listNovedades.vue'
 
 export default {
     components:{
-        Note, Gcaptcha, List
+        Note, Gcaptcha, List, Message
     },
     data(){
         return{
@@ -248,7 +236,8 @@ export default {
             nameCompany: '',
             funcionary: '',
             workCenter: '',
-            files: null,
+
+            file: null,
 
             // list noveltys
             list: [],
@@ -288,54 +277,44 @@ export default {
             ],
 
             termsConditions: false,
-            resCaptcha: true,
+            resCaptcha: false,
         }
     },    
     methods:{
 
         async sendInfoNovelty(){
-            let file;
             let list;
 
             if(this.emailCompany !== '' && this.nameCompany !== '' && this.funcionary !== '' && this.termsConditions && this.resCaptcha === true){
-                
-                if(this.files !== '') file = await UploadImage( this.files )            
-                if(this.list !== 0) list = this.list
-                
+                                
+                if(this.list !== 0){
+                    list = this.list
+                }
+
                 const data = {
-                    center: this.workCenter,
+                    workCenter: this.workCenter,
                     company: this.nameCompany,
                     email: this.emailCompany,
-                    funcionary: this.funcionary,
-                    file,
-                    list,
+                    nameFuncionary: this.funcionary,
+                    files: this.file,
+                    listNovelty: list
                 }
 
-                const response = await Post.postFormNoveltys( data )
-                if(response){
-                    this.snackbar = true
-                    this.colorSnackbar = 'green accent-4'
-                    this.message = 'Asegurate de diligenciar todos los campos incluyendo el captcha'
-                    setTimeout(()=>{
-                        this.snackbar = false 
-                    },3000)
-                    this.$refs.formNovelty.validate()
-                }
-
+                await Post.postFormNoveltys( data )
+                
+                this.snackbar = true
+                this.colorSnackbar = 'green accent-4'
+                this.message = 'Se envio tu solicitud'
+                setTimeout(()=>{ this.snackbar = false },3000)
+                this.$refs.formNovelty.reset()
                                     
             }else{
                 this.snackbar = true
                 this.colorSnackbar = 'red accent-3'
                 this.message = 'Asegurate de diligenciar todos los campos incluyendo el captcha'
-                setTimeout(()=>{
-                    this.snackbar = false 
-                },3000)
+                setTimeout(()=>{ this.snackbar = false },3000)
                 this.$refs.formNovelty.validate()
             }           
-        },
-
-        onSelectedFiles( event ){
-            this.files = event
         },
 
         verifyCaptcha(response){
@@ -343,8 +322,7 @@ export default {
                 this.resCaptcha = response
             }
         },
-        
-        
+                
         addNewItem(){
             if(this.novelty !== '' && this.name !== '' && this.dateBirth !== '' && this.month !== '' && this.typeId !== ''  && this.numId !== '' && this.numPhone !== ''){
 
@@ -357,6 +335,14 @@ export default {
                     phone: this.numPhone,
                     typeId: this.typeId,
                 })
+
+                this.snackbar = true
+                this.colorSnackbar = 'green accent-4'
+                this.message = 'Se agrego una novedad a tu listado de novedades.'
+
+                setTimeout(()=>{
+                   this.snackbar = false 
+                },3000)
 
                 this.name = ''
                 this.typeId = ''

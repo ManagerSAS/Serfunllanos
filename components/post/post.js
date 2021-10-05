@@ -1,8 +1,16 @@
-// import olivosApi from '../api/olivosApi'
+import olivosApi from '../api/olivosApi'
+
+const forms = '/api/v1/forms'
 
 export default {
+    
     postFormNoveltys( data ){
-        return data
-        // olivosApi.post('/novedades-empresariales', data)
+        olivosApi.post( forms + '/novedades-empresariales', data)
+            .then( response => response.json())
+    },
+
+    postFormAuxilios( data ){
+        olivosApi.post( forms + '/auxilios-funerarios', data)
+            .then( response => response.json())
     }
 }

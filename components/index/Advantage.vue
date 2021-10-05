@@ -2,9 +2,8 @@
     <v-row align="center" justify="center" class="mt-15">
         <v-col cols="12" sm="12" md="12" lg="6">
             <v-row justify="center" align="center">
-                <v-col cols="12" sm="4" md="12" lg="3">
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
+                <v-col cols="4" sm="4" md="12" lg="3">
+                    <v-hover v-slot="{ hover }">
                             <v-card 
                                 :color="`${hover ? 'green accent-3' : 'card-shadow'}`"
                                 class="rounded-xl pa-5 transition-swing" 
@@ -16,60 +15,53 @@
                                     </v-icon>
                                 </v-card-text>
                             </v-card>
-                        </template>
                     </v-hover>
                 </v-col>
-                <v-col cols="12" sm="4" md="12" lg="3">
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
-                            <v-card 
-                                :color="`${hover ? 'blue accent-3' : 'card-shadow'}`"
-                                class="rounded-xl pa-5 transition-swing" 
-                                outlined
-                            >
-                                <v-card-text class="text-center">
-                                    <v-icon :color="`${hover ? 'white' : 'blue accent-3'}`">
-                                        mdi-account-outline mdi-48px
-                                    </v-icon>
-                                </v-card-text>
-                            </v-card>
-                        </template>
+                <v-col cols="4" sm="4" md="12" lg="3">
+                    <v-hover v-slot="{ hover }">
+                        <v-card 
+                            :color="`${hover ? 'blue accent-3' : 'card-shadow'}`"
+                            class="rounded-xl pa-5 transition-swing" 
+                            outlined
+                        >
+                            <v-card-text class="text-center">
+                                <v-icon :color="`${hover ? 'white' : 'blue accent-3'}`">
+                                    mdi-account-outline mdi-48px 
+                                </v-icon>
+                            </v-card-text>
+                        </v-card>
                     </v-hover>
                 </v-col>
             </v-row>
             <v-row justify="center">                
-                <v-col cols="12" sm="4" md="12" lg="3">
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
-                            <v-card 
-                                :color="`${hover ? 'orange accent-3' : 'card-shadow'}`"
-                                class="rounded-xl pa-5 transition-swing" 
-                                outlined
-                            >
-                                <v-card-text class="text-center">
-                                    <v-icon :color="`${hover ? 'white' : 'orange accent-3'}`">
-                                        mdi-city-variant-outline mdi-48px
-                                    </v-icon>
-                                </v-card-text>
-                            </v-card>
-                        </template>
+                <v-col cols="4" sm="4" md="12" lg="3">
+                    <v-hover v-slot="{ hover }">
+                        <v-card 
+                            :color="`${hover ? 'orange accent-3' : 'card-shadow'}`"
+                            class="rounded-xl pa-5 transition-swing" 
+                            outlined
+                        >
+                            <v-card-text class="text-center">
+                                <v-icon :color="`${hover ? 'white' : 'orange accent-3'}`">
+                                    mdi-city-variant-outline mdi-48px
+                                </v-icon>
+                            </v-card-text>
+                        </v-card>
                     </v-hover>
                 </v-col>
-                <v-col cols="12" sm="4" md="12" lg="3">
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
-                            <v-card 
-                                :color="`${hover ? 'pink accent-3' : 'card-shadow'}`"
-                                class="rounded-xl pa-5 transition-swing" 
-                                outlined
-                            >
-                                <v-card-text class="text-center">
-                                    <v-icon :color="`${hover ? 'white' : 'pink accent-3'}`">
-                                        mdi-hand-heart-outline mdi-48px
-                                    </v-icon>
-                                </v-card-text>
-                            </v-card>
-                        </template>
+                <v-col cols="4" sm="4" md="12" lg="3">
+                    <v-hover v-slot="{ hover }">
+                        <v-card 
+                            :color="`${hover ? 'pink accent-3' : 'card-shadow'}`"
+                            class="rounded-xl pa-5 transition-swing" 
+                            outlined
+                        >
+                            <v-card-text class="text-center">
+                                <v-icon :color="`${hover ? 'white' : 'pink accent-3'}`">
+                                    mdi-hand-heart-outline mdi-48px
+                                </v-icon>
+                            </v-card-text>
+                        </v-card>
                     </v-hover>
                 </v-col>
             </v-row>

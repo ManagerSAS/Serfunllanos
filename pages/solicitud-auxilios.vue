@@ -3,12 +3,13 @@
 		<v-row justify="center" align="center" class="mt-md-15 pa-md-0">
 			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
 		        <v-row>
-					<v-col cols="12" sm="12" md="12" lg="8">
+					<v-col cols="12" sm="12" md="12" lg="7">
 						<h1 class="color-blue-dark display-1 font-weight-bold mb-6">
-							Novedades de Afiliaciones Empresariales:
+							Solicitud de auxilios
 						</h1>
 						<p class="secondary--text">
-							Estimado cliente por este medio podrá inscribir todas las novedades que requiera, cualquier inquietud por favor comunicarse al área de cartera teléfonos 6653986 - 6653987
+							Revise y prepare la documentación que necesite, según su solicitud. Toda la documentación deberá subirse en un único archivo .pdf de máximo 22MB,
+                            que deberá adjuntar al momento de diligenciar el siguiente formulario.
 						</p>
 					</v-col>
 				</v-row>
@@ -23,7 +24,7 @@
 </template>
 <script>
 
-import Formulario from '../components/forms/novedades/novedadesEmpresariales.vue';
+import Formulario from '../components/forms/auxilios/auxiliosenlinea.vue';
 
 export default {
     components:{

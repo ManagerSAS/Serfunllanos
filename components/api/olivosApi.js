@@ -1,11 +1,12 @@
 import axios from "axios"
 
-const END_POINTH = ''
+const END_POINTH = 'https://api.losolivosvillavicencio.com'
 
 const cloudinaryApi = axios.create({
     baseURL: END_POINTH,
     headers:{
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
     }
 })
 

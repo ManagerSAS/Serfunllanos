@@ -3,28 +3,29 @@
         <v-row>
             <v-col cols="12" sm="12" md="12" lg="8">
                 <h2 class="color-blue-dark font-weight-bold mb-6">
-                   Cenizarios:
+                   Cenizarios
                 </h2>
-                <p class="secondary--text">
-                    Distinción y sobriedad en nuestros Cenizarios, que se visten de gala para albergar los sentimientos de muchas familias, para quienes custodiamos sus tesoros más preciados, representados en las memorias de sus seres queridos en un ambiente tranquilo y confortable
-                </p>
             </v-col>
         </v-row>
         <v-row>
-            <v-col cols="12" sm="12" md="12" lg="3"
-                v-for="({title, subtitle, img}, index) in salas"
+            <v-col 
+                v-for="({title, subtitle, img}, index) in cenizarios"
                 :key="index"
+                cols="12" sm="4" md="3" lg="3"        
             >
-                <v-card class="rounded-xl card-shadow-2">
-                    <v-img
-                        :lazy-src="img"
-                        :src="img"
-                        height="200"
-                    ></v-img>
-                    <v-card-title> {{ title }}</v-card-title>
+                <v-card class="rounded-xl card-shadow pa-5">
+                    <v-card class="rounded-xl" elevation="8">
+                        <v-img
+                            :lazy-src="img"
+                            :src="img"
+                            height="350"
+                            class="pa-2 "
+                        ></v-img>
+                    </v-card>
+                    <v-card-title class="subtitle-1"> {{ title }} </v-card-title>
                     <v-card-subtitle> {{ subtitle }} </v-card-subtitle>
                 </v-card>
-            </v-col>
+            </v-col>            
         </v-row>
     </div>
 </template>
@@ -32,7 +33,7 @@
 export default {
     data(){
         return{
-            salas:[
+            cenizarios:[
                 {
                     title: 'Cenizario sencillo',
                     subtitle: 'Villavicencio',

@@ -3,10 +3,10 @@
 		<v-row justify="center" align="center" class="pt-12">
 			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
                 <v-row align="center">
-                    <v-col cols="4">
+                    <v-col cols="12" sm="12" md="4">
                         <img src="../static/logo.webp" alt="" width="181" class="mb-6"><br>
                     </v-col>
-                    <v-col cols="8">
+                    <v-col cols="12" sm="12" md="8">
                         <span class="secondary--text"> En los Olivos Llanos Orientales atendemos y orientamos a nuestros afiliados para la coordinación de homenajes las 24 horas de día, los 365 días del año en el PBX 6 68 52 86 o nuestra línea 01 8000 915 286. </span>
                     </v-col>
                 </v-row>
@@ -76,6 +76,7 @@ export default {
         return{
             interesting:[
                 { text: 'Actualización de datos', to: '/' },
+                { text: 'Solicitud de auxilios', to: '/solicitud-auxilios' },
                 { text: 'Novedades empresariales', to: '/novedades-empresariales' },
                 { text: 'Proteccion de datos', to: '/' },
                 { text: 'Asistencias', to: '/' },

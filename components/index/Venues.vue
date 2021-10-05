@@ -13,11 +13,11 @@
             </v-btn>
         </v-col>
         <v-col cols="12" sm="12" md="12" lg="6">
-            <v-row class="ml-8">
+            <v-row class="ml-md-8">
                 <v-col cols="12" sm="12" md="6">
                     <v-card class="rounded-xl mb-3 transition-swing">
                         <v-img
-                            :src="src"
+                            src="https://res.cloudinary.com/dbepipmro/image/upload/v1633127737/Sala3_dbbxrx.webp"
                             height="150"
                             class="rounded-xl mb-3"
                         ></v-img>
@@ -26,7 +26,7 @@
                         <v-col cols="6">                            
                             <v-card class="rounded-xl mb-3 transition-swing">
                                 <v-img
-                                    :src="src2"                                
+                                    src="https://res.cloudinary.com/dbepipmro/image/upload/v1633127573/foto2_jcjeir.webp"
                                     height="150"
                                     class="rounded-xl mb-3"
                                 ></v-img>
@@ -35,7 +35,7 @@
                         <v-col cols="6">                            
                             <v-card class="rounded-xl mb-3 transition-swing">
                                 <v-img
-                                    :src="src3"
+                                    src="https://res.cloudinary.com/dbepipmro/image/upload/v1633127698/sede_ufitsi.webp"
                                     class="rounded-xl mb-3"
                                     height="150"
                                 ></v-img>
@@ -50,10 +50,10 @@
                         ></v-img>
                     </v-card>                        
                 </v-col>
-                <v-col cols="6">                    
+                <v-col cols="6" class="d-none d-md-flex">                    
                     <v-card class="rounded-xl mb-3 transition-swing" width="250">
                         <v-img
-                            :src="src2"
+                            src="https://res.cloudinary.com/dbepipmro/image/upload/v1633127337/Sede_Villavicencio_tr2naj.webp"
                             class="rounded-xl"
                             width="250"
                             height="475"
@@ -69,7 +69,7 @@ export default {
     data(){
         return{
             model: null,
-            src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631889047/chris-curry-aDXuh9QMtQw-unsplash_gla2e8.jpg',
+            src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1633127337/Sede_Villavicencio_tr2naj.webp',
             src2: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631889117/humberto-portillo-GtgHHOzxaHU-unsplash_eadmco.jpg',
             src3: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631888243/saul-flores-uTejvwg8UGE-unsplash_nwnftp.jpg' ,
 

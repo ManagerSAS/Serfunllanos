@@ -6,7 +6,7 @@
                     <v-col cols="12" sm="12" md="12" lg="6">
                         <v-img
                             class="rounded-xl d-none d-lg-flex"
-                            src="https://res.cloudinary.com/dbepipmro/image/upload/v1631899047/gradienta-7brhZmwXn08-unsplash_hxm7ok.jpg"
+                            src="https://res.cloudinary.com/dbepipmro/image/upload/v1633127803/Contacto_ff9xdr.jpg"
                             width="523"
                             height="780"
                         >
@@ -48,7 +48,7 @@
                                     <v-text-field
                                         label="Nombre"
                                         placeholder="Juan Manuel"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         hide-details
                                     ></v-text-field>
                                 </v-col>
@@ -56,7 +56,7 @@
                                     <v-text-field
                                         label="Apellidos"
                                         placeholder="Camacho"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         hide-details
                                     ></v-text-field>
                                 </v-col>
@@ -66,7 +66,7 @@
                                     <v-text-field
                                         label="Email"
                                         placeholder="email@example.com"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         hide-details
                                     ></v-text-field>
                                 </v-col>
@@ -74,7 +74,7 @@
                                     <v-text-field
                                         label="Telefono"
                                         placeholder="3223821204"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         hide-details
                                     ></v-text-field>
                                 </v-col>
@@ -84,7 +84,7 @@
                                     <v-text-field
                                         label="Dirección de contacto"
                                         placeholder="Carrera 14 # 22 - 28"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         hide-details
                                     ></v-text-field>
                                 </v-col>
@@ -94,7 +94,7 @@
                                     <v-text-field
                                         label="Documento"
                                         placeholder="487975474547"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         hint="El numero de documento no debe contener puntos."
                                         persistent-hint
                                     ></v-text-field>
@@ -105,7 +105,7 @@
                                     <v-text-field
                                         label="Ciudad"
                                         placeholder="ciudad residencia"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         hide-details
                                     ></v-text-field>
                                 </v-col>
@@ -113,7 +113,7 @@
                                     <v-text-field
                                         label="Asunto"
                                         placeholder=""
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         hide-details
                                     ></v-text-field>
                                 </v-col>
@@ -122,19 +122,19 @@
                                 <v-col cols="12" sm="12" md="12" lg="12">
                                     <v-textarea
                                         label="Mensaje"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         rows="2"
                                         hide-details
                                     ></v-textarea>
                                     <v-row no-gutters align="center">
-                                        <v-col cols="1">
+                                        <v-col cols="2">
                                             <v-checkbox
-                                                color="teal accent-3"
+                                                color="teal darken-4"
                                                 value=""
                                                 hide-details
                                             ></v-checkbox>
                                         </v-col>
-                                        <v-col cols="4">
+                                        <v-col cols="10">
                                             <div class="mt-5">
                                                 <Nuxt-link to="#"> Ver términos y Condiciones </Nuxt-link>
                                             </div>
@@ -146,7 +146,7 @@
                                 <v-col cols="12" sm="12" md="12" lg="12">
                                     <v-btn
                                         class="shadow-principal btn-hover"
-                                        color="teal accent-3"
+                                        color="teal darken-4"
                                         rounded
                                         large
                                         dark

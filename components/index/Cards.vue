@@ -18,6 +18,7 @@
                         class="green accent-3 shadow-principal btn-hover"
                         dark
                         rounded
+                        to="pay"
                     >
                         Pagos
                     </v-btn>
@@ -42,6 +43,7 @@
                         class="teal accent-3 shadow-principal btn-hover"
                         dark
                         rounded
+                        to="registration"
                     >
                         Ver registros
                     </v-btn>
@@ -67,6 +69,7 @@
                         class="pink accent-3 shadow-principal btn-hover"
                         dark
                         rounded
+                        to="/obituarios"
                     >
                         Ver obituarios
                     </v-btn>
