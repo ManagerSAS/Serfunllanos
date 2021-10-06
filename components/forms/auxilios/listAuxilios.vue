@@ -2,7 +2,7 @@
     <v-card class="rounded-xl v_card">
         <v-expansion-panels accordion flat>
             <v-expansion-panel
-                v-for="({title, description, list},i) in items"
+                v-for="({title, description, list, subtitle},i) in items"
                 :key="i"
                 active-class="teal lighten-5"
             >
@@ -18,7 +18,7 @@
                     </ul>
                     <br>
                     <p v-html="subtitle"></p>
-                    <ul>
+                    <ul v-if="i !== 4">
                         <li 
                             v-for="item in listTwo" :key="item.id"
                         >
@@ -46,7 +46,8 @@ export default {
                         'Registro Único Tributario RUT del afiliado',
                         'Registro civil de defunción',
                         'Factura original de gastos sufragados para la atención del homenaje.',
-                    ]
+                    ],
+                    subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
                 },
                 {
                     title: 'Auxilio Osario o Cenizario',
@@ -60,7 +61,8 @@ export default {
                         'Registro Único Tributario RUT del afiliado',
                         'Registro civil de defunción',
                         'Factura original de la compra del Osario o Cenizario',
-                    ]
+                    ],
+                    subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
                 },
                 {
                     title: 'Auxilio repatriación de cenizas',
@@ -74,7 +76,8 @@ export default {
                         'Registro Único Tributario RUT del afiliado',
                         'Registro civil de defunción',
                         'Factura original de gastos sufragados para la repatriación de Cenizas',
-                    ]
+                    ],
+                    subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
                 },
                 {
                     title: 'Auxilio por fallecimiento en el exterior afiliado principal',
@@ -88,7 +91,8 @@ export default {
                         'Registro Único Tributario RUT del afiliado',
                         'Registro civil de defunción',
                         'Factura original de gastos sufragados para la atención del homenaje en el exterior',
-                    ]
+                    ],
+                    subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
                 },
                 {
                     title: 'Auxilio por desaparición afiliado principal',
@@ -101,10 +105,18 @@ export default {
                         'Certificación bancaria del afiliado',
                         'Registro Único Tributario RUT del afiliado',
                         'Documento donde se declare por las entidades competente la muerte por desaparición',
-                    ]
-                }
+                        'Estar marcada como expresamente factura de venta',
+                        'Contener los apellidos y nombres o razón social del vendedor',
+                        'Apellidos y nombres o razón social del comprador de los bienes o servicios, junto con la discriminación del IVA pagado (modificado Ley 788 de 2002 articulo 64)',
+                        'Llevar un número que corresponda con la numeración consecutiva de la factura de venta',
+                        'Fecha de expedición',
+                        'Descripción especifica o genérica de los artículos vendidos o los servicios prestados',
+                        'Valor total de la venta',
+                        'El nombre o razón social o el NIT del impresor de la factura',
+                        'Indicar la calidad de retenedor del impuesto sobre las ventas',
+                    ],
+                }            
             ],
-            subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
 
             listTwo:[
                 'Estar marcada como expresamente factura de venta',

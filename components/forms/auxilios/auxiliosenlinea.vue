@@ -1,7 +1,7 @@
 <template>
     <v-row>
         <v-col cols="12" sm="12" md="12" lg="7">
-            <p class="secondary--text">Diligencia tu solicitud de auxilios de acuerdo a la información que se encuentra en la izquierda</p>
+            <p class="secondary--text">Diligencia tu solicitud de auxilios de acuerdo a la información que se encuentra en la derecha</p>
             <v-form ref="formAuxilios">
                 <v-row>
                     <v-col cols="12" sm="12" md="12" lg="6">
@@ -163,9 +163,9 @@
                 </v-row>
                 <v-row>
                     <v-col cols="12" sm="12" md="12" lg="12">
-                        <p class="secondary--text"> Adjunte su documentación* Recuerda que debes subir un unico archivo con toda la informacion.
-                        </p>                        
+                        <p class="secondary--text"> Adjunte su documentación* Recuerda que debes subir un unico archivo con toda la informacion.</p>
                         <v-file-input
+                            accept=".pdf"
                             v-model="file"
                             label="Adjuntar archivo *"
                             :color="style.colorInput"
@@ -211,7 +211,7 @@
 </template>
 <script>
 
-import uploadImage from '../../helpers/uploadImage'
+// import uploadImage from '../../helpers/uploadImage'
 import Gcaptcha from '../recaptcha.vue'
 import Post from '../../post/post'
 import Message from '../messages/message1.vue'
@@ -259,7 +259,7 @@ export default {
                 v => !!v || 'Campo requerido',
             ],
             
-            resCaptcha: true,
+            resCaptcha: false,
 
         }
     },    
@@ -273,7 +273,7 @@ export default {
                 && this.NombreAfiliado !== '' && this.ApellidosAfiliado !== '' && this.CedulaAfiliado !== '' && this.CelularAfiliado !== '' 
                 && this.DireccionAfiliado !== '' && this.EmailAfiliado !== '' && this.EmpresaAfiliado !== '' && this.resCaptcha === true ){
                 
-                const response = await uploadImage( this.file )                
+                // const response = await uploadImage( this.file )
 
                 const data = {
                     typeRequest: this.typeRequest,
@@ -287,12 +287,10 @@ export default {
                     CelularAfiliado: this.CelularAfiliado,
                     DireccionAfiliado: this.DireccionAfiliado,
                     EmailAfiliado: this.EmailAfiliado,
-                    EmpresaAfiliado: this.EmpresaAfiliado,
-                    archivo: response
+                    EmpresaAfiliado: this.EmpresaAfiliado,                    
                 }
 
-
-                await Post.postFormNoveltys( data )
+                await Post.postFormAuxilios( data )
 
                 this.snackbar = true
                 this.colorSnackbar = 'green accent-4'
