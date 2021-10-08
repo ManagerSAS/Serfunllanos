@@ -10,7 +10,7 @@
                     </v-icon>
                 </v-card-title>
 
-                <v-card-text class="color-blue-dark mb-5">
+                <v-card-text class="color-blue-dark">
                     Realice el pago de su plan de previsión exequial, Homenaje al amor o cualquier otro tipo de pago a través de PSE tarjetas de crédito u otros medios.
                 </v-card-text>
                 <v-card-text>
@@ -35,7 +35,7 @@
                     </v-icon>
                 </v-card-title>
 
-                <v-card-text class="color-blue-dark mb-5">
+                <v-card-text class="color-blue-dark">
                     Realice el pago de su plan de previsión exequial, Homenaje al amor o cualquier otro tipo de pago a través de PSE tarjetas de crédito u otros medios.
                 </v-card-text>
                 <v-card-text>
@@ -61,7 +61,7 @@
                     </v-icon>
                 </v-card-title>
 
-                <v-card-text class="color-blue-dark mb-5">
+                <v-card-text class="color-blue-dark">
                     Realice el pago de su plan de previsión exequial, Homenaje al amor o cualquier otro tipo de pago a través de PSE tarjetas de crédito u otros medios.
                 </v-card-text>
                 <v-card-text>

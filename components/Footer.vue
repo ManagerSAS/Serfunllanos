@@ -75,9 +75,7 @@ export default {
     data(){
         return{
             interesting:[
-                { text: 'Actualización de datos', to: '/' },
-                { text: 'Solicitud de auxilios', to: '/solicitud-auxilios' },
-                { text: 'Novedades empresariales', to: '/novedades-empresariales' },
+                { text: 'Solicitudes en línea', to: '/solicitudes-en-linea' },               
                 { text: 'Proteccion de datos', to: '/' },
                 { text: 'Asistencias', to: '/' },
                 { text: 'Seguros de vida', to: '/' },

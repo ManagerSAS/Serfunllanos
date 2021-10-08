@@ -11,7 +11,7 @@
                             >
                                 <v-card-text class="text-center">
                                     <v-icon :color="`${hover ? 'white' : 'green accent-3'}`">
-                                        mdi-flag-outline mdi-48px
+                                        mdi-flag-outline mdi-36px
                                     </v-icon>
                                 </v-card-text>
                             </v-card>
@@ -26,7 +26,7 @@
                         >
                             <v-card-text class="text-center">
                                 <v-icon :color="`${hover ? 'white' : 'blue accent-3'}`">
-                                    mdi-account-outline mdi-48px 
+                                    mdi-account-outline mdi-36px 
                                 </v-icon>
                             </v-card-text>
                         </v-card>
@@ -43,7 +43,7 @@
                         >
                             <v-card-text class="text-center">
                                 <v-icon :color="`${hover ? 'white' : 'orange accent-3'}`">
-                                    mdi-city-variant-outline mdi-48px
+                                    mdi-city-variant-outline mdi-36px
                                 </v-icon>
                             </v-card-text>
                         </v-card>
@@ -58,7 +58,7 @@
                         >
                             <v-card-text class="text-center">
                                 <v-icon :color="`${hover ? 'white' : 'pink accent-3'}`">
-                                    mdi-hand-heart-outline mdi-48px
+                                    mdi-hand-heart-outline mdi-36px
                                 </v-icon>
                             </v-card-text>
                         </v-card>
