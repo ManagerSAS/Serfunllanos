@@ -15,8 +15,7 @@
                         :src="src"
                         reverse-transition="fade-transition"
                         transition="fade-transition"
-                    >
-                    </v-carousel-item>
+                    ></v-carousel-item>
                 </v-carousel>
             </div>
         </v-col>
