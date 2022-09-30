@@ -1,7 +1,10 @@
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script> 
 <template>
     <div>
-        <vue-recaptcha sitekey="6Lef5JocAAAAAMRlwsFX2tCqRdLohymFmlrW6CeT" :loadRecaptchaScript="true"
+        <!-- <vue-recaptcha sitekey="6LcC5_IgAAAAAAkMC9SkVn3pxf15VQatALkge7Sn" :loadRecaptchaScript="true"
+            @verify="verifyCaptcha"            
+        ></vue-recaptcha> -->
+        <vue-recaptcha sitekey="6LdvjuUgAAAAAMYiZWsGOPhSPTMerdbCa5OdjKnK" :loadRecaptchaScript="true"
             @verify="verifyCaptcha"            
         ></vue-recaptcha>
     </div>

@@ -1,0 +1,59 @@
+.contObituario{
+    background-image: url('https://res.cloudinary.com/olivos-villavicencio/image/upload/c_scale,h_600,w_1000/v1654527957/ndyrjaejzkcqc2fymqfx.gif');
+    height: 100%;
+    width: 100%;
+}
+.fondoSlider{
+    background-image: url('https://res.cloudinary.com/olivos-villavicencio/image/upload/c_scale,h_300/v1654527957/ndyrjaejzkcqc2fymqfx.gif');
+    height: 400px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.fotohomenaje{
+    width: 155px;
+     height: 155px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     top: 7px;
+     overflow:hidden; 
+     position: relative;
+}
+.fotohomenajegrande{
+    width: 330px;
+     height: 330px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     top: 10px;
+     overflow:hidden; 
+     position: relative;
+}
+.circulogrande{
+    height: 350px;
+    width: 350px;;
+    background-image: linear-gradient(85deg, #A3591B 0%, #FADC79 16.1099%,#986221 47.2791%, #F7D066 75.5545%, #FFF18F 100%); 
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    border: 10px;
+    border-radius:50%;
+}
+.titulos{
+    color: #FCF0A5;
+    font-size: 10px;
+}
+.description{
+    font-size: 10px;
+    color: black;
+}
+.circuloPequeño{
+    height: 170px;
+    width: 170px;;
+    background-image: linear-gradient(85deg, #A3591B 0%, #FADC79 16.1099%,#986221 47.2791%, #F7D066 75.5545%, #FFF18F 100%); 
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    border: 10px;
+    border-radius:50%;
+}
+
+
